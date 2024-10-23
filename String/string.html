@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string in javascript.</title>
+</head>
+
+<body>
+
+    <script>
+        console.log('some' + 'text');
+        console.log(typeof ('hello'));
+        console.log('Hello' + 3);
+        console.log('$' + (20.95 + 7.99));
+        console.log('$' + (2095 + 799) / 100);
+        console.log('items (' + (1 + 1) + '): $' + (2095 + 799) / 100);
+        console.log("'I am learning javascript'");
+        console.log('I\'m learning javascript');
+        console.log('hello\nworld');
+        console.log(`Abhishek ${3}`);
+        console.log(`Abhisehk
+        kumar`);
+
+        console.log('abhishek'.toUpperCase());
+        console.log('abhishek'.length);
+
+        const myObj1 = {
+            message: 'hello'
+        }
+
+        const myObj2 = myObj1;
+
+        myObj1.message = 'Good job!';
+        console.log(myObj1);
+        console.log(myObj2);
+
+        const myObj3 = {
+            message: 'Good job!'
+        };
+
+        console.log(myObj1 === myObj3);
+        console.log(myObj1 === myObj2);
+
+        const myObj4 = {
+            message: 'Good job!',
+            price: 799
+        };
+
+        // const message = myObj4.message;
+        const { message, price } = myObj4;
+        console.log(message + " " + price);
+
+        const myObj5 = {
+            // message: message
+            message,
+            // method: function function1() {
+            //     console.log('method');
+            // }
+            method() {
+                console.log('method');
+            }
+        }
+
+        console.log(myObj5);
+        myObj5.method();
+
+    </script>
+</body>
+
+</html>

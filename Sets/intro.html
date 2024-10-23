@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets in javascript</title>
+  </head>
+  <body>
+    <h1>What is sets?</h1>
+    <p>Sets is an iterable like array and string in javascript</p>
+    <strong>Features: </strong>
+    <ul>
+      <li>Store data</li>
+      <li>only Unique items store no duplicate items</li>
+      <li>no index based accesssing</li>
+      <li>items order is not guaranteed</li>
+      <li>it has own method</li>
+    </ul>
+    
+    <script>
+      const numbers = new Set([2, 1, 8, 1]);
+      numbers.add('item1');
+      numbers.add('item2');
+      numbers.add(['item1'], ['item2']);
+      console.log(typeof numbers)
+      console.log(numbers)
+
+      const name = new Set('Sham');
+      name.add(9);
+      console.log(name)
+
+      // Accessing set using for of loop.
+      for (let number of numbers) {
+        console.log(number)
+      }
+
+      // As we can't access set using its index so we can't accessing its value using 
+      // for in loop
+      /*
+      for (let number in numbers) {
+        console.log(numbers[number])
+      }
+      */
+
+      if (name.has('S')) {
+        console.log('x is present in the name');
+      } else {
+        console.log('This name does not contain x');
+      }
+
+      // We can use set to find unique element in array
+      const myArray = [3, 2, 2, 3, 8, 1];
+      const uniqueElements = new Set(myArray);
+      console.log(uniqueElements);
+      // To find the length of sets we can do below thing or we cand iterate and find length
+      console.log(uniqueElements.size);
+
+      let length = 0;
+      for (let element of uniqueElements) {
+        length++;
+      }
+      console.log(length);
+    </script>
+  </body>
+</html>

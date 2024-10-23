@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const o1 = {
+        key1: 'value1', 
+        key2: 'value2'
+      }
+
+      const o2 = Object.create(o1);
+      o2.key3 = 'value3';
+      console.log(o2.key3);
+      console.log(o2.key1);
+      console.log(o2.__proto__); //__proto__ or [[Prototype]] is same. but prototype is dirrerent.
+
+      // const o2 = {
+      //   key3: 'value3'
+      // }
+
+      // o2.key1 = 'value1';
+
+      // console.log(o1.key1);
+      // console.log(o2.key1);
+    </script>
+  </body>
+</html>

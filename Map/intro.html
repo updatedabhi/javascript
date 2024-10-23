@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map in javascript</title>
+  </head>
+  <body>
+    <h1>What is map?</h1>
+    <p>
+      In javascript map and object is almost similar but there is big difference
+      between map and object is that map key can be any data type but object key in 99%
+      of time it is string. 
+    </p>
+    <strong>Features: </strong>
+    <ul>
+      <li>We can use for of loop in map</li>
+      <li>We can't access values using .notation or square bracket</li>
+      <li>ordered is guarnteed.</li>
+    </ul>
+    
+    <script>
+      const person = new Map();
+      person.set('FirstName', 'Abhishek');
+      person.set('age', 343);
+      person.set(1, 'one');
+      console.log(person, typeof person);
+      console.log(person.get('FirstName'));
+      console.log(person.get(1));
+      console.log(person.keys());
+
+      // for (let key of person.keys()) {
+      //   console.log(key, typeof key);
+      // }
+
+      // accessing map using for of loop.
+      for (let [key, value] of person) {
+        console.log(key, value);
+      }
+
+      const myMap = new Map([['FirstName', 'Sonu'], ['age', 34]]);
+      console.log(myMap)
+
+      const employee = {
+        id: 2,
+        firstName: 'Abhishek'
+      }
+
+      const employee2 = {
+        id: 1,
+        firstName: 'Sagar'
+      }
+
+      const empInfo = new Map();
+      empInfo.set(employee, {age: 34, gender: 'male', isGF: false});
+      console.log(empInfo);
+      console.log(empInfo.get(employee).isGF);
+
+      empInfo.set(employee2, {age: 53, gender: 'Male', city: 'Patna'});
+      console.log(empInfo.get(employee2).city);
+
+
+      // Object cloning
+      /*
+      const obj1 = {
+        id: 4,
+        name: 'Sonam'
+      }
+
+      const obj2 = obj1;
+
+      obj1.age = 34;
+
+      console.log(obj2)
+      */
+
+      const obj1 = {
+        id: 4,
+        name: 'Sonam'
+      }
+
+      // using spread operator
+      const obj2 = {...obj1};
+      obj1.gender = 'female';
+      console.log(obj2);
+
+      // Typical way
+      const obj3 = Object.assign({skill: 'Mechanical Engineer'}, obj1);
+      obj1.isBF = true;
+      console.log(obj3)
+
+      // optinal chaining
+
+      const user = {
+        firstName: 'Nikhil',
+        // address: {houseNumber: '3434'}
+      }
+
+      console.log(user.firstName);
+      console.log(user?.address?.houseNumber)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>methods in javascript</title>
+  </head>
+  <body>
+    <h1>This Keyword</h1>
+    <p>The value of this Keyword is known to us at run time means dynamically.</p>
+    
+    <script>
+
+      function normalFunction() {
+        "use strict"
+        console.log(this);
+      }
+
+      // normalFunction();
+      // const boundFunction = normalFunction.bind(this);
+      // boundFunction();
+
+      normalFunction.call(Window);
+
+      // Call()
+
+      function hello() {
+        console.log('hello');
+      }
+      hello.call();
+
+      function about(hobby, favFood) {
+          console.log(this.name, this.age, hobby, favFood)
+        }
+
+      const user1 = {
+        name: 'Abhishek',
+        age: 34,
+      }
+
+      const user2 = {
+        name: 'Harshit',
+        age: 3,
+      }
+
+      about.call(user2, 'Cricket', 'Dal Chawal');
+
+      // user1.about();
+
+      // apply()
+      about.apply(user1, ['Football', 'Noodles']);
+
+      // bid()
+      const bindFunction = about.bind(user2, 'Chess', 'Momos');
+      bindFunction();
+    </script>
+  </body>
+</html>

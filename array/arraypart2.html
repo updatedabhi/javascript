@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div>
+      <input type="text">
+      <button onclick="
+          addItem()
+        ">add</button>
+      <div class="js-text-list"></div>
+    </div>
+    <script>
+      const arr = [];
+      function addItem() {
+        const inputElement = document.querySelector('input');
+        const inputValue = inputElement.value;
+        arr.push(inputValue);
+        console.log(arr);
+        inputElement.value = '';
+        let htmlElement = '';
+        for (let i = 0; i < arr.length; i++) {
+          const html = `<p>${arr[i]}<button onclick="
+                removeItem(${i});
+              ">Delete</button></p>`;
+          htmlElement = htmlElement + html;
+        }
+        document.querySelector('.js-text-list').innerHTML = htmlElement;
+      }
+      function removeItem(index) {
+        arr.splice(index, 1);
+      }
+    </script>
+  </body>
+
+</html>

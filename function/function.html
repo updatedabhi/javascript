@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+
+<body>
+
+
+    <script>
+        function function1() {
+            console.log('hello');
+            console.log(2 + 3);
+        }
+
+        function convertDegreeToFahrenheit(degree) {
+            const fahrenheit = (degree * 9 / 5) + 32;
+            return fahrenheit;
+        }
+
+        function1();
+        function1();
+
+        console.log(convertDegreeToFahrenheit(5) + ' Degree Fahrenheit');
+
+        // function returning function: higher order function
+        function myFunc() {
+            function hello() {
+                console.log("hello world");
+            }
+            return hello;
+        }
+
+        const ans = myFunc();
+        ans();
+    </script>
+</body>
+
+</html>

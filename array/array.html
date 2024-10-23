@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and loops</title>
+  </head>
+
+  <body>
+    <script>
+      /*
+      const myArray = [10, 20, 30];
+      console.log(myArray);
+
+      console.log(myArray[3]);
+      myArray[0] = 99;
+      console.log(myArray[0]);
+
+      [1, 'hello', true, {name: 'Abhishek'}, [1, 2]]
+
+      console.log(typeof [1, 2]);
+      console.log(Array.isArray([1, 2]));
+
+      console.log(myArray.length);
+
+      myArray.push(40);
+      console.log(myArray);
+
+      myArray.splice(0, 2);
+      console.log(myArray);
+      
+      let i = 1;
+
+      while (i <= 5) {
+        console.log(i);
+        i++;
+      }
+
+      const todoList = [
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+      ]
+
+      for (let i = 0; i < todoList.length; i++) {
+        const value = todoList[i];
+        console.log(value);
+      }
+      
+      const nums = [1, 1, 3];
+      let total = 0;
+      for (let i = 0; i < nums.length; i++) {
+        total += nums[i];
+      }
+      console.log(total);
+
+      const numsDoubled = [];
+      for (let i = 0; i < nums.length; i++) {
+        const num = nums[i];
+        numsDoubled.push(2 * num);
+      }
+
+      console.log(numsDoubled);
+      
+      let fruits = [
+        'aplle',
+        'mango',
+        'orange',
+        'banana'
+      ];
+      console.log(fruits[3]);
+      console.log(Array.isArray(fruits));
+      
+
+      let numbers = [3, 8, 0, 1, NaN];
+      console.log(numbers);
+
+      console.log(typeof numbers);
+
+      numbers.push(undefined);
+      const returnValue = numbers.pop();
+      console.log(numbers);
+      console.log(returnValue);
+
+      // to add element in the starting of array
+      numbers.unshift(8.9);
+      console.log(numbers);
+
+      const removeNumber = numbers.shift();
+      console.log(removeNumber);
+
+      // A very popular difference between primitive data type and referance data type
+      // primitive 
+      let num1 = 3;
+      let num2 = num1
+      num1++;
+      console.log(num1);
+      console.log(num2);
+
+      let string1 = 'Hello';
+      let string2 = string1;
+      string1 = string1 + ' Bye';
+      console.log(string1);
+      console.log(string2);
+
+      let name = 'Abhishek';
+      console.log(...name);
+
+      // referance
+      const item1 = ['html', 'css', 'react'];
+      const item2 = item1;
+      item1.push('angular');
+      console.log(item1);
+      console.log(item2);
+
+      // cloning or copying first method: 
+      const arry1 = ['Bheem', 'Chutaki', 'Kaliya'];
+      const arry2 = arry1.slice();
+      arry1.push('Raju');
+      console.log(arry1);
+      console.log(arry2);
+
+      // second method:
+      const colors1 = ['red', 'blue', 'orange'];
+      const colors2 = [].concat(colors1);
+      colors1.push('yellow');
+      console.log(colors1);
+      console.log(colors2);
+
+      // third method;
+      const arr1 = ['Abhishek', 'Sonam', 'Sagar'];
+      const arr2 = [...arr1]; //(spread operator is used to store previous value);
+      arr1.push('Mahesh');
+      console.log(arr1);
+      console.log(arr2);
+
+      // Array accessing using for loop
+
+      const animals = ['rabbit', 'tiger', 'lion', 'monkey'];
+      console.log('using for loop:');
+      for (let i = 0; i < animals.length; i++) {
+        const animal = animals[i];
+        console.log(animal);
+      }
+
+      // using for each loop
+      console.log('using for each: ');
+      animals.forEach((value) => {
+        console.log(value)
+      });
+
+      console.log('using for each again: ');
+      animals.forEach(function (animal, index) {
+        console.log(index, animal);
+      });
+
+      console.log('shortcut of for each: ');
+      animals.forEach(value => { console.log(value) });
+
+      // using for of loop:
+      console.log('using for of loop: ');
+      for (let animal of animals) {
+        console.log(animal.toUpperCase());
+      }
+
+      // using for in loop:
+      console.log('using for in loop');
+      for (let index in animals) {
+        console.log(animals[index]);
+      }
+      */
+
+      // array destructring:
+      const birds = ['crow', 'parrot', 'owl', 'swan'];
+      const [bird1, bird2] = birds;
+      console.log(bird1, bird2);
+
+      const [b1, b2, b3, b4, b5] = birds;
+      console.log(b5);
+
+      const [brd1, , brd3] = birds;
+      console.log(brd1, brd3);
+
+      const [br1, br2, ...birds1] = birds;
+      console.log(birds1);
+
+
+
+
+
+
+    </script>
+  </body>
+
+</html>

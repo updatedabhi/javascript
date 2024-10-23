@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background-color: blue;
+    width: 60vw;
+    border: 2px solid black;
+    border-radius: 7px;
+    margin: auto;
+    padding: 25px;
+}
+
+p {
+    text-align: center;
+    color: white;
+}
+
+.btn {
+    display: block;
+    width: 7%;
+    margin: auto;
+    margin-top: 5px;
+    background-color: rgb(195, 195, 236);
+    cursor: pointer;
+}
+
+.container2 {
+    padding: 24px;
+    margin: auto;
+    width: 50%;
+    border: 2px solid rgb(78, 19, 216);
+}
+
+span {
+    display: none;
+}
+
+.form-container {
+    margin-top: 45px;
+    border: 2px solid red;
+    padding: 34px;
+}
+
+.my-div-containier {
+    width: 40%;
+    margin: 22px auto;
+    padding: 23px;
+    border: 2px solid blue;
+    background-color: seashell;
+}
+
+textarea {
+    display: block;
+    width: 40%;
+    margin: 22px auto;
+    padding: 23px;
+    border: 2px solid blue;
+    background-color: seashell;   
+}
+
+.editable-box {
+    padding: 56px;
+    border: 2px solid brown;
+    margin: 23px;
+}

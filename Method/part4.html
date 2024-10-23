@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods in js</title>
+  </head>
+
+  <body>
+    <h1>Methods in javascript</h1>
+    <script>
+      /*
+      const user = {
+        firstName: 'Abhishek',
+        lastName: 'Gupta',
+        email: 'abhishek54162@gmail.com',
+        age: 34,
+        address: 'House Number, Colony, pincode, state',
+        about: function() {
+          console.log(`${this.firstName} is ${this.age} years old`);
+        },
+        is18: function() {
+          return this.age >= 18;
+        }
+      }
+      */
+      // const userMethods = {
+      //   about : function() {
+      //     console.log(`${this.firstName} is ${this.age} years old`);
+      //   },
+      //   is18 : function() {
+      //     return this.age >= 18;
+      //   },
+      //   chaiPeenahai: function() {
+      //     console.log(this.firstName + " Chalo");
+      //   },
+      //   greet: function() {
+      //     console.log('hello ' + this.firstName);
+      //   }
+      // }
+
+      function CreateUser(firstName, lastName, email, age, address) {
+        // const user = Object.create(userMethods);
+        // const user = Object.create(createUser.prototype);
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.age = age;
+        this.address = address;
+      }
+
+      CreateUser.prototype.about = function () {
+        console.log(`${this.firstName} is ${this.age} years old`);
+      };
+
+      CreateUser.prototype.is18 = function () {
+        return this.age >= 18;
+      };
+
+      CreateUser.prototype.chaiPeenahai = function() {
+        console.log(this.firstName + " Chalo");
+      };
+
+      CreateUser.prototype.greet = function () {
+        console.log('hello ' + this.firstName);
+      };
+
+
+      const user1 = new CreateUser('Abhishek', 'Gupta', 'abhishek@gmail.com', 34, 'Araria Bihar');
+      console.log(user1.is18());
+      user1.about();
+      user1.chaiPeenahai();
+      user1.greet();
+      console.log(user1)
+      // const user2 = createUser('Virat', 'Kohli', 'virat@gmail.com', 54, 'Delhi India');
+      // user2.greet();
+    </script>
+  </body>
+
+</html>

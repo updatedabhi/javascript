@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+</head>
+
+<body>
+  <h1>ghadi</h1>
+  <h2></h2>
+  <button class="btn1">start</button>
+  <button class="btn2">stop</button>
+
+  <script>
+    const heading = document.querySelector('h2');
+    const startBtn = document.querySelector('.btn1');
+    const stopBtn = document.querySelector('.btn2');
+    let intervalId; // Declare intervalId outside event listeners
+
+    // Function to update time
+    function updateTime() {
+      let currentDate = new Date();
+      let hours = currentDate.getHours();
+      let minute = currentDate.getMinutes();
+      let seconds = currentDate.getSeconds();
+      heading.innerHTML = hours + ' : ' + minute + ' : ' + seconds;
+    }
+
+    // Initial interval setup
+    intervalId = setInterval(updateTime, 1000);
+
+    startBtn.addEventListener('click', () => {
+      // Ensure there's no interval running before starting a new one
+      clearInterval(intervalId);
+      intervalId = setInterval(updateTime, 1000);
+    })
+
+    stopBtn.addEventListener('click', () => {
+      clearInterval(intervalId);
+    })
+
+  </script>
+</body>
+
+</html>

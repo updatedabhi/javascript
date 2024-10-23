@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function in js</title>
+  </head>
+
+  <body>
+    <h1>Arrow Function</h1>
+    <script>
+      const user1 = {
+        name: 'Abhishek',
+        age: 34,
+        about: () => {
+          console.log(this.name, this.age);
+        }
+      };
+
+      user1.about(this);
+      user1.about(user1);
+
+      const user2 = {
+        name: 'Abhishek',
+        age: 34,
+        about() {
+          console.log(this.name, this.age);
+        }
+      };
+
+      user2.about();
+
+      function myFunc() {
+        return this.name + " " + this.age;
+      }
+
+      const obj1 = {name: 'Abhishek', age: 34};
+      const obj2 = {name: 'Raju', age: 89};
+
+      obj1.newFunc = myFunc;
+
+      console.log(obj1.newFunc());
+    </script>
+  </body>
+
+</html>

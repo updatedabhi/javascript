@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const firstName = 'Abhishek';
+      const lastName = 'Sah';
+      const fullName = firstName + lastName;
+      console.log(fullName);
+      console.log(typeof fullName);
+      const age = 18 + ''; // short hand to convert number to string
+      console.log(age);
+      console.log(typeof age);
+
+      const firstNumber = '7';
+      const secondNumber = '8';
+      const sum = +firstNumber + +secondNumber; // short hand to convert string to number
+      console.log(sum);
+      console.log(typeof sum);
+
+      // another way of type conversion:
+      let productId = '34';
+      productId = Number(productId);
+      console.log(productId);
+      console.log(typeof productId);
+
+      let price = 89.79;
+      price = String(price);
+      console.log(price);
+      console.log(typeof price);
+
+      // template string:
+      console.log(`My name is ${firstName} ${lastName} and my age is ${age}`);
+
+      // slice method
+      const message = 'Hey there!';
+      console.log(message.slice(0, 3));
+
+      let text = 'Welcome to coding world.';
+      text = text.slice(text.length - 6, text.length);
+      console.log(text);
+      console.log(text.toUpperCase());
+
+      const mystring = `     This is javascript code    `;
+      console.log(mystring);
+      console.log(mystring.trim());
+
+      const key = +prompt('Enter day code: ');
+      switch (key) {
+        case 1:
+          alert('Monday');
+          break;
+        case 2:
+          alert('Tuesday');
+          break;
+        case 3:
+          alert('Wednesday');
+          break;
+        case 4:
+          alert('Thursday');
+          break;
+        case 5:
+          alert('Friday');
+          break;
+        case 6:
+          alert('Saturday');
+          break;
+        case 7:
+          alert('Sunday');
+          break;
+      
+        default:
+          alert('oops! invalid day.');
+          break;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetching API using JavaScript</title>
+</head>
+
+<body>
+  <h1>Fetching data from api</h1>
+  <script>
+    // Initiate the fetch request to the API
+    let p = fetch("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m");
+
+    // Log the initial fetch promise
+    console.log(p);
+
+    // Handle the fetch promise
+    p.then(response => {
+      // Log the raw response object
+      console.log(response);
+
+      // Log the promise returned by the json() method
+      console.log(response.json());
+
+      // Convert the response to JSON
+      return response.json();
+    })
+    .then(data => {
+      // Log the parsed JSON data
+      console.log(data);
+    })
+    .catch(error => {
+      // Handle any errors that occur during the fetch process
+      console.error('Error fetching the data:', error);
+    });
+  </script>
+  
+</body>
+
+</html>

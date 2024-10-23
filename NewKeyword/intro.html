@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New keyword</title>
+  </head>
+  <body>
+    <script>
+      function createUser(firstName, age) {
+        this.firstName = firstName;
+        this.age = age;
+      }
+
+      createUser.prototype.about = function () {
+        console.log('hello this is ' + this.firstName);
+      }
+
+      const user1 = new createUser('Abhishek', 34);
+
+      console.log(user1);
+
+      user1.about();
+    </script>
+  </body>
+</html>
