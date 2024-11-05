@@ -1,3 +1,5 @@
+// this refers to current caller object
+
 function about(role, experience) {
   console.log(this.name, this.age, role, experience);
 }

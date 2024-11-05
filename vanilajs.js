@@ -24,9 +24,36 @@
 // q.push(23);
 // console.log(q);
 
-const m = [3, 2, 1];
-const n = m.slice();
-console.log(m);
-n.shift();
-n.unshift(892);
-console.log(n);
+// const m = [3, 2, 1];
+// const n = m.slice();
+// console.log(m);
+// n.shift();
+// n.unshift(892);
+// console.log(n);
+
+const xyz = {
+  dish: "Matar paneer",
+  singer: "Arjit singh",
+  employee: {
+    empName: "Abhishek",
+    age: 34,
+    role: "javascript",
+    experience: 5,
+    company: "google",
+    abc: function () {
+      console.log(this);
+    },
+  },
+};
+// xyz.employee.abc();
+
+function foo() {
+  console.log(this);
+}
+foo();
+
+const moo = () => {
+  console.log(this);
+};
+
+moo();
